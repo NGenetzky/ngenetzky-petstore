@@ -6,7 +6,8 @@ from pprint import pprint
 
 # Configure OAuth2 access token for authorization: petstore_auth
 # swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
-swagger_client.configuration.host = 'http://0.0.0.0:8080/nathansen4/ngenetzky-petstore/1.0.0'
+# swagger_client.configuration.host = 'http://0.0.0.0:8080/nathansen4/ngenetzky-petstore/1.0.0'
+swagger_client.configuration.host = 'http://server_python_flask:8080/nathansen4/ngenetzky-petstore/1.0.0'
 
 # create an instance of the API class
 api_instance = swagger_client.PetApi()

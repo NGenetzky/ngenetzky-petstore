@@ -10,5 +10,6 @@ COPY ./swagger_client ./swagger_client
 
 COPY ./run.py ./
 
-CMD [ "python", "./run.py" ]
+# CMD [ "python", "./run.py" ]
+CMD [ "/bin/sh" ]
 

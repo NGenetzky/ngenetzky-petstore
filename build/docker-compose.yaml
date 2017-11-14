@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  server_python_flask:
+    build: ./server_python_flask
+    ports:
+      - 8080:8080
+
+  client_python:
+    build: ./client_python
+    depends_on:
+      - server_python_flask
