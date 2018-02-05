@@ -67,7 +67,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://virtserver.swaggerhub.com/nathansen/ngenetzky-petstore/1.0.0*
+All URIs are relative to *http://0.0.0.0/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

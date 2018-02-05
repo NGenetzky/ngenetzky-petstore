@@ -20,7 +20,7 @@ class TestPetController(BaseTestCase):
         """
         body = Pet()
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet',
+            '/v1/pet',
             method='POST',
             data=json.dumps(body),
             content_type='application/json')
@@ -34,7 +34,7 @@ class TestPetController(BaseTestCase):
         """
         headers = [('api_key', 'api_key_example')]
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet/{petId}'.format(petId=789),
+            '/v1/pet/{petId}'.format(petId=789),
             method='DELETE',
             headers=headers)
         self.assert200(response,
@@ -47,7 +47,7 @@ class TestPetController(BaseTestCase):
         """
         query_string = [('status', 'available')]
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet/findByStatus',
+            '/v1/pet/findByStatus',
             method='GET',
             query_string=query_string)
         self.assert200(response,
@@ -60,7 +60,7 @@ class TestPetController(BaseTestCase):
         """
         query_string = [('tags', 'tags_example')]
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet/findByTags',
+            '/v1/pet/findByTags',
             method='GET',
             query_string=query_string)
         self.assert200(response,
@@ -72,7 +72,7 @@ class TestPetController(BaseTestCase):
         Find pet by ID
         """
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet/{petId}'.format(petId=789),
+            '/v1/pet/{petId}'.format(petId=789),
             method='GET')
         self.assert200(response,
                        'Response body is : ' + response.data.decode('utf-8'))
@@ -84,7 +84,7 @@ class TestPetController(BaseTestCase):
         """
         body = Pet()
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet',
+            '/v1/pet',
             method='PUT',
             data=json.dumps(body),
             content_type='application/json')
@@ -99,7 +99,7 @@ class TestPetController(BaseTestCase):
         data = dict(name='name_example',
                     status='status_example')
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet/{petId}'.format(petId=789),
+            '/v1/pet/{petId}'.format(petId=789),
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -114,7 +114,7 @@ class TestPetController(BaseTestCase):
         data = dict(additionalMetadata='additionalMetadata_example',
                     file=(BytesIO(b'some file data'), 'file.txt'))
         response = self.client.open(
-            '/nathansen/ngenetzky-petstore/1.0.0/pet/{petId}/uploadImage'.format(petId=789),
+            '/v1/pet/{petId}/uploadImage'.format(petId=789),
             method='POST',
             data=data,
             content_type='multipart/form-data')

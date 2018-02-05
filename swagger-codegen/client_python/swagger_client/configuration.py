@@ -58,7 +58,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "https://virtserver.swaggerhub.com/nathansen/ngenetzky-petstore/1.0.0"
+        self.host = "http://0.0.0.0/v1"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
