@@ -1,0 +1,21 @@
+# base-image for python on any machine using a template variable,
+# see more about dockerfile templates here:http://docs.resin.io/pages/deployment/docker-templates
+FROM resin/%%RESIN_MACHINE_NAME%%-alpine-python:3
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY ./swagger-codegen/server_python_flask/requirements.txt /usr/src/app/
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+COPY ./swagger-codegen/server_python_flask/ /usr/src/app
+
+# switch on systemd init system in container
+ENV INITSYSTEM on
+
+EXPOSE 8080
+
+ENTRYPOINT ["python3"]
+
+CMD ["-m", "swagger_server"]
