@@ -1,6 +1,6 @@
 # swagger_client.StoreApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/nathansen4/ngenetzky-petstore/1.0.0*
+All URIs are relative to *https://virtserver.swaggerhub.com/nathansen/ngenetzky-petstore/1.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,9 +17,9 @@ Delete purchase order by ID
 
 For valid response try integer IDs with positive integer value.\\ \\ Negative or non-integer values will generate API errors
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -29,7 +29,7 @@ from pprint import pprint
 api_instance = swagger_client.StoreApi()
 order_id = 789 # int | ID of the order that needs to be deleted
 
-try: 
+try:
     # Delete purchase order by ID
     api_instance.delete_order(order_id)
 except ApiException as e:
@@ -64,23 +64,24 @@ Returns pet inventories by status
 
 Returns a map of status codes to quantities
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-swagger_client.configuration.api_key['api_key'] = 'YOUR_API_KEY'
+configuration = swagger_client.Configuration()
+configuration.api_key['api_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['api_key'] = 'Bearer'
+# configuration.api_key_prefix['api_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.StoreApi()
+api_instance = swagger_client.StoreApi(swagger_client.ApiClient(configuration))
 
-try: 
+try:
     # Returns pet inventories by status
     api_response = api_instance.get_inventory()
     pprint(api_response)
@@ -93,7 +94,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**dict(str, int)**](dict.md)
+**dict(str, int)**
 
 ### Authorization
 
@@ -113,9 +114,9 @@ Find purchase order by ID
 
 For valid response try integer IDs with value >= 1 and <= 10.\\ \\ Other values will generated exceptions
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -125,7 +126,7 @@ from pprint import pprint
 api_instance = swagger_client.StoreApi()
 order_id = 789 # int | ID of pet that needs to be fetched
 
-try: 
+try:
     # Find purchase order by ID
     api_response = api_instance.get_order_by_id(order_id)
     pprint(api_response)
@@ -159,9 +160,9 @@ No authorization required
 
 Place an order for a pet
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -171,7 +172,7 @@ from pprint import pprint
 api_instance = swagger_client.StoreApi()
 body = swagger_client.Order() # Order | order placed for purchasing the pet
 
-try: 
+try:
     # Place an order for a pet
     api_response = api_instance.place_order(body)
     pprint(api_response)

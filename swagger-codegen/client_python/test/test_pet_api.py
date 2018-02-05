@@ -3,7 +3,7 @@
 """
     Swagger Petstore
 
-    This is a sample server Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/). 
+    This is a sample Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/).   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: apiteam@swagger.io
@@ -24,85 +24,75 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.pet_api import PetApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.pet_api import PetApi
 
 
 class TestPetApi(unittest.TestCase):
-    """ PetApi unit test stubs """
+    """PetApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.pet_api.PetApi()
+        self.api = swagger_client.api.pet_api.PetApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_add_pet(self):
-        """
-        Test case for add_pet
+        """Test case for add_pet
 
-        Add a new pet to the store
+        Add a new pet to the store  # noqa: E501
         """
         pass
 
     def test_delete_pet(self):
-        """
-        Test case for delete_pet
+        """Test case for delete_pet
 
-        Deletes a pet
+        Deletes a pet  # noqa: E501
         """
         pass
 
     def test_find_pets_by_status(self):
-        """
-        Test case for find_pets_by_status
+        """Test case for find_pets_by_status
 
-        Finds Pets by status
+        Finds Pets by status  # noqa: E501
         """
         pass
 
     def test_find_pets_by_tags(self):
-        """
-        Test case for find_pets_by_tags
+        """Test case for find_pets_by_tags
 
-        Finds Pets by tags
+        Finds Pets by tags  # noqa: E501
         """
         pass
 
     def test_get_pet_by_id(self):
-        """
-        Test case for get_pet_by_id
+        """Test case for get_pet_by_id
 
-        Find pet by ID
+        Find pet by ID  # noqa: E501
         """
         pass
 
     def test_update_pet(self):
-        """
-        Test case for update_pet
+        """Test case for update_pet
 
-        Update an existing pet
+        Update an existing pet  # noqa: E501
         """
         pass
 
     def test_update_pet_with_form(self):
-        """
-        Test case for update_pet_with_form
+        """Test case for update_pet_with_form
 
-        Updates a pet in the store with form data
+        Updates a pet in the store with form data  # noqa: E501
         """
         pass
 
     def test_upload_file(self):
-        """
-        Test case for upload_file
+        """Test case for upload_file
 
-        uploads an image
+        uploads an image  # noqa: E501
         """
         pass
 

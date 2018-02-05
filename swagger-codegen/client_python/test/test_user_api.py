@@ -3,7 +3,7 @@
 """
     Swagger Petstore
 
-    This is a sample server Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/). 
+    This is a sample Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/).   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: apiteam@swagger.io
@@ -24,85 +24,75 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.user_api import UserApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.user_api import UserApi
 
 
 class TestUserApi(unittest.TestCase):
-    """ UserApi unit test stubs """
+    """UserApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.user_api.UserApi()
+        self.api = swagger_client.api.user_api.UserApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_create_user(self):
-        """
-        Test case for create_user
+        """Test case for create_user
 
-        Create user
+        Create user  # noqa: E501
         """
         pass
 
     def test_create_users_with_array_input(self):
-        """
-        Test case for create_users_with_array_input
+        """Test case for create_users_with_array_input
 
-        Creates list of users with given input array
+        Creates list of users with given input array  # noqa: E501
         """
         pass
 
     def test_create_users_with_list_input(self):
-        """
-        Test case for create_users_with_list_input
+        """Test case for create_users_with_list_input
 
-        Creates list of users with given input array
+        Creates list of users with given input array  # noqa: E501
         """
         pass
 
     def test_delete_user(self):
-        """
-        Test case for delete_user
+        """Test case for delete_user
 
-        Delete user
+        Delete user  # noqa: E501
         """
         pass
 
     def test_get_user_by_name(self):
-        """
-        Test case for get_user_by_name
+        """Test case for get_user_by_name
 
-        Get user by user name
+        Get user by user name  # noqa: E501
         """
         pass
 
     def test_login_user(self):
-        """
-        Test case for login_user
+        """Test case for login_user
 
-        Logs user into the system
+        Logs user into the system  # noqa: E501
         """
         pass
 
     def test_logout_user(self):
-        """
-        Test case for logout_user
+        """Test case for logout_user
 
-        Logs out current logged in user session
+        Logs out current logged in user session  # noqa: E501
         """
         pass
 
     def test_update_user(self):
-        """
-        Test case for update_user
+        """Test case for update_user
 
-        Updated user
+        Updated user  # noqa: E501
         """
         pass
 

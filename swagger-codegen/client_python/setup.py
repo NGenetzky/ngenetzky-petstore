@@ -3,7 +3,7 @@
 """
     Swagger Petstore
 
-    This is a sample server Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/). 
+    This is a sample Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/).   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: apiteam@swagger.io
@@ -22,12 +22,10 @@
     limitations under the License.
 """
 
-import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "swagger_client"
+NAME = "swagger-client"
 VERSION = "1.0.0"
-
 # To install the library, run the following
 #
 # python setup.py install
@@ -48,7 +46,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    This is a sample server Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/). 
+    This is a sample Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/).   # noqa: E501
     """
 )
-

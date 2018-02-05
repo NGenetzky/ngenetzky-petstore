@@ -1,9 +1,11 @@
 # coding: utf-8
 
+# flake8: noqa
+
 """
     Swagger Petstore
 
-    This is a sample server Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/). 
+    This is a sample Petstore server.  You can find  out more about Swagger at  [http://swagger.io](http://swagger.io) or on  [irc.freenode.net, #swagger](http://swagger.io/irc/).   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: apiteam@swagger.io
@@ -24,22 +26,18 @@
 
 from __future__ import absolute_import
 
-# import models into sdk package
-from .models.api_response import ApiResponse
-from .models.category import Category
-from .models.order import Order
-from .models.pet import Pet
-from .models.tag import Tag
-from .models.user import User
-
 # import apis into sdk package
-from .apis.pet_api import PetApi
-from .apis.store_api import StoreApi
-from .apis.user_api import UserApi
+from swagger_client.api.pet_api import PetApi
+from swagger_client.api.store_api import StoreApi
+from swagger_client.api.user_api import UserApi
 
 # import ApiClient
-from .api_client import ApiClient
-
-from .configuration import Configuration
-
-configuration = Configuration()
+from swagger_client.api_client import ApiClient
+from swagger_client.configuration import Configuration
+# import models into sdk package
+from swagger_client.models.api_response import ApiResponse
+from swagger_client.models.category import Category
+from swagger_client.models.order import Order
+from swagger_client.models.pet import Pet
+from swagger_client.models.tag import Tag
+from swagger_client.models.user import User
