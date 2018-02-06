@@ -14,7 +14,7 @@ COPY ./swagger-codegen/server_python_flask/ /usr/src/app
 # switch on systemd init system in container
 ENV INITSYSTEM on
 
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT ["python3"]
 

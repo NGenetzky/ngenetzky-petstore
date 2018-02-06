@@ -9,7 +9,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY ./swagger-codegen/server_python_flask/ /usr/src/app
 
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT ["python3"]
 
