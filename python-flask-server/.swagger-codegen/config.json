@@ -1,7 +1,10 @@
 {
   "spec": {},
   "options": {
-    "packageName": "ngenetzky_petstore_server"
+    "packageName": "ngenetzky_petstore_server",
+    "packageVersion": "2.0.0",
+    "supportPython2": "true",
+    "serverPort": "80"
   },
   "swaggerUrl": "https://raw.githubusercontent.com/NGenetzky/ngenetzky-petstore/6b7b0a3a72a568e6321f30536cf1318062e52644/api/swagger.yaml"
 }

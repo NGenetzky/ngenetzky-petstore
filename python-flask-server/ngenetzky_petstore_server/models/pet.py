@@ -17,7 +17,7 @@ class Pet(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, id: int=None, category: Category=None, name: str=None, photo_urls: List[str]=None, tags: List[Tag]=None, status: str=None):  # noqa: E501
+    def __init__(self, id=None, category=None, name=None, photo_urls=None, tags=None, status=None):  # noqa: E501
         """Pet - a model defined in Swagger
 
         :param id: The id of this Pet.  # noqa: E501
@@ -59,7 +59,7 @@ class Pet(Model):
         self._status = status
 
     @classmethod
-    def from_dict(cls, dikt) -> 'Pet':
+    def from_dict(cls, dikt):
         """Returns the dict as a model
 
         :param dikt: A dict.
@@ -70,7 +70,7 @@ class Pet(Model):
         return util.deserialize_model(dikt, cls)
 
     @property
-    def id(self) -> int:
+    def id(self):
         """Gets the id of this Pet.
 
 
@@ -80,7 +80,7 @@ class Pet(Model):
         return self._id
 
     @id.setter
-    def id(self, id: int):
+    def id(self, id):
         """Sets the id of this Pet.
 
 
@@ -91,7 +91,7 @@ class Pet(Model):
         self._id = id
 
     @property
-    def category(self) -> Category:
+    def category(self):
         """Gets the category of this Pet.
 
 
@@ -101,7 +101,7 @@ class Pet(Model):
         return self._category
 
     @category.setter
-    def category(self, category: Category):
+    def category(self, category):
         """Sets the category of this Pet.
 
 
@@ -112,7 +112,7 @@ class Pet(Model):
         self._category = category
 
     @property
-    def name(self) -> str:
+    def name(self):
         """Gets the name of this Pet.
 
 
@@ -122,7 +122,7 @@ class Pet(Model):
         return self._name
 
     @name.setter
-    def name(self, name: str):
+    def name(self, name):
         """Sets the name of this Pet.
 
 
@@ -135,7 +135,7 @@ class Pet(Model):
         self._name = name
 
     @property
-    def photo_urls(self) -> List[str]:
+    def photo_urls(self):
         """Gets the photo_urls of this Pet.
 
 
@@ -145,7 +145,7 @@ class Pet(Model):
         return self._photo_urls
 
     @photo_urls.setter
-    def photo_urls(self, photo_urls: List[str]):
+    def photo_urls(self, photo_urls):
         """Sets the photo_urls of this Pet.
 
 
@@ -158,7 +158,7 @@ class Pet(Model):
         self._photo_urls = photo_urls
 
     @property
-    def tags(self) -> List[Tag]:
+    def tags(self):
         """Gets the tags of this Pet.
 
 
@@ -168,7 +168,7 @@ class Pet(Model):
         return self._tags
 
     @tags.setter
-    def tags(self, tags: List[Tag]):
+    def tags(self, tags):
         """Sets the tags of this Pet.
 
 
@@ -179,7 +179,7 @@ class Pet(Model):
         self._tags = tags
 
     @property
-    def status(self) -> str:
+    def status(self):
         """Gets the status of this Pet.
 
         pet status in the store  # noqa: E501
@@ -190,7 +190,7 @@ class Pet(Model):
         return self._status
 
     @status.setter
-    def status(self, status: str):
+    def status(self, status):
         """Sets the status of this Pet.
 
         pet status in the store  # noqa: E501

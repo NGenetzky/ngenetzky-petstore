@@ -8,26 +8,26 @@ is an example of building a swagger-enabled Flask server.
 This example uses the [Connexion](https://github.com/zalando/connexion) library on top of Flask.
 
 ## Requirements
-Python 3.5.2+
+Python 2.7+
 
 ## Usage
 To run the server, please execute the following from the root directory:
 
 ```
-pip3 install -r requirements.txt
-python3 -m ngenetzky_petstore_server
+pip install -r requirements.txt
+python -m ngenetzky_petstore_server
 ```
 
 and open your browser to here:
 
 ```
-http://localhost:8080/v2/ui/
+http://localhost:80/v2/ui/
 ```
 
 Your Swagger definition lives here:
 
 ```
-http://localhost:8080/v2/swagger.json
+http://localhost:80/v2/swagger.json
 ```
 
 To launch the integration tests, use tox:
@@ -45,5 +45,5 @@ To run the server on a Docker container, please execute the following from the r
 docker build -t ngenetzky_petstore_server .
 
 # starting up a container
-docker run -p 8080:8080 ngenetzky_petstore_server
+docker run -p 80:80 ngenetzky_petstore_server
 ```
