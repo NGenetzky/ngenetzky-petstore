@@ -1,0 +1,17 @@
+# FROM python:2-alpine
+FROM resin/%%RESIN_MACHINE_NAME%%-alpine-python:2
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY ./python-flask-server/requirements.txt /usr/src/app/
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY ./python-flask-server/ /usr/src/app
+
+EXPOSE 80
+
+ENTRYPOINT ["python"]
+
+CMD ["-m", "ngenetzky_petstore_server"]
