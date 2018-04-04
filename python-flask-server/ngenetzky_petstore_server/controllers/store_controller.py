@@ -1,8 +1,8 @@
 import connexion
 import six
 
-from swagger_server.models.order import Order  # noqa: E501
-from swagger_server import util
+from ngenetzky_petstore_server.models.order import Order  # noqa: E501
+from ngenetzky_petstore_server import util
 
 
 def delete_order(orderId):  # noqa: E501

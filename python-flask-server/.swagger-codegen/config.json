@@ -3,5 +3,5 @@
   "options": {
     "packageName": "ngenetzky_petstore_server"
   },
-  "swaggerUrl": "https://raw.githubusercontent.com/NGenetzky/ngenetzky-api/e701bde32b46c1db9dbeb35ccf5be5e32d03ffab/api/swagger.yaml"
+  "swaggerUrl": "https://raw.githubusercontent.com/NGenetzky/ngenetzky-petstore/6b7b0a3a72a568e6321f30536cf1318062e52644/api/swagger.yaml"
 }

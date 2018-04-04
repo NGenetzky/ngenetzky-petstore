@@ -5,8 +5,8 @@ from __future__ import absolute_import
 from flask import json
 from six import BytesIO
 
-from swagger_server.models.user import User  # noqa: E501
-from swagger_server.test import BaseTestCase
+from ngenetzky_petstore_server.models.user import User  # noqa: E501
+from ngenetzky_petstore_server.test import BaseTestCase
 
 
 class TestUserController(BaseTestCase):

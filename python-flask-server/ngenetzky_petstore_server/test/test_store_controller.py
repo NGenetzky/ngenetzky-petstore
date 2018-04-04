@@ -5,8 +5,8 @@ from __future__ import absolute_import
 from flask import json
 from six import BytesIO
 
-from swagger_server.models.order import Order  # noqa: E501
-from swagger_server.test import BaseTestCase
+from ngenetzky_petstore_server.models.order import Order  # noqa: E501
+from ngenetzky_petstore_server.test import BaseTestCase
 
 
 class TestStoreController(BaseTestCase):

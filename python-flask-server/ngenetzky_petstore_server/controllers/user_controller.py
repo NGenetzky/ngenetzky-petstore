@@ -1,8 +1,8 @@
 import connexion
 import six
 
-from swagger_server.models.user import User  # noqa: E501
-from swagger_server import util
+from ngenetzky_petstore_server.models.user import User  # noqa: E501
+from ngenetzky_petstore_server import util
 
 
 def create_user(body):  # noqa: E501
