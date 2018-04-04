@@ -8,7 +8,7 @@ GITROOT="${GITROOT-$(readlink -f ./$(git rev-parse --show-cdup))}"
 
 get_swagger_url(){
   local commit="${1?}"
-  echo "https://raw.githubusercontent.com/NGenetzky/ngenetzky-api/${commit}/api/swagger.yaml"
+  echo "https://raw.githubusercontent.com/NGenetzky/ngenetzky-petstore/${commit}/api/swagger.yaml"
 }
 
 ################################################################################
