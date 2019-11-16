@@ -1,5 +1,4 @@
 variables:
-  IMAGE_NAME: "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA"
   SRC_DIR: "$CI_PROJECT_DIR/python-flask-server"
 
 build:
@@ -9,4 +8,4 @@ build:
     entrypoint: [""]
   script:
     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --cache=true --context $SRC_DIR --dockerfile $SRC_DIR/Dockerfile --destination $IMAGE_NAME
+    - /kaniko/executor --cache=true --context $SRC_DIR --dockerfile $SRC_DIR/Dockerfile --destination $CI_REGISTRY_IMAGE
